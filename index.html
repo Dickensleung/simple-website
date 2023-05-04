@@ -15,11 +15,29 @@
   </style>
 </head>
 <body>
+  <header class="header container">
+    <h1>Social Media Dashboard </h1>
+    Total Followers: 23,004
+  
+    <fieldset aria-label="theme toggle" role="radiogroup">
+      <label for="light">Light</label>
+      <div class="toggle__wrapper">
+        <span class="toggle__wrapper">
+          <input type="radio" name="theme" id="light" checked>
+          <!-- light label ends-->
+          <input type="radio" name="theme" id="system" checked><!-- adjusted according to system preferences-->
+          <input type="radio" name="theme" id="dark">
+          <span aria-hidden="true" class="toggle__background"></span>
+          <span aria-hidden="true" class="toggle__switcher"></span>
+        </span>
+        <label for="system-pref">System Preference</label>
+        <label for="dark">Dark</label>
+        <!-- dark label ends-->
+      </div>
+      Dark Mode
+    </fieldset>
+  </header>
 
-  Social Media Dashboard
-  Total Followers: 23,004
-
-  Dark Mode
 
   
 
@@ -81,7 +99,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Dickens Leung</a>.
   </div>
 </body>
 </html>

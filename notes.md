@@ -52,3 +52,8 @@ Outline for video:
 
 Semantic HTML and accessibility -- https://www.youtube.com/watch?v=qSNUi7pRmWg
 Inclusive cards -- https://inclusive-components.design/cards/
+
+Resources & Links to respective owners
+
+a. Accessible Options Toggle Switch
+https://codepen.io/SaraSoueidan/pen/jpBbrq/ 
