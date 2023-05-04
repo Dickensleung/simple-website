@@ -1,0 +1,18 @@
+@use '../util' as *;
+
+.card{
+
+    &__icon{
+        &--facebook{
+            border-top: rem(5) solid var(--facebook);
+        }
+
+        &--twitter{
+            border-top: rem(5) solid var(--twitter);
+        }
+
+        &--instagram{
+            padding-top: rem(30);
+        }
+    }
+}

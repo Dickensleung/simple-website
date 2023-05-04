@@ -53,6 +53,23 @@ Outline for video:
 Semantic HTML and accessibility -- https://www.youtube.com/watch?v=qSNUi7pRmWg
 Inclusive cards -- https://inclusive-components.design/cards/
 
+Styling --BLOCK ELEMENT MODIFIER 
+
+Block = card 
+Element, icon, platform, count, change
+Modifier = facebook, twitter, etc
+
+card
+card__icon
+card__icon--facebook
+card__username
+
+card__count
+card__label
+
+card__change
+card__change--increase, card__change--decrease
+
 Resources & Links to respective owners
 
 a. Accessible Options Toggle Switch
