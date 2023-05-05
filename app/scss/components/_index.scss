@@ -1,1 +1,4 @@
+@use "globals";
 @forward 'header';
+@forward 'toggle';
+@forward 'card';

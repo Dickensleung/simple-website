@@ -1,2 +1,2 @@
-.header .header__title h1{font-size:4em}
+.header{display:flex;flex-wrap:wrap;margin-top:2.25rem}@media (min-width:40em){.header{align-items:center;justify-content:space-between}}.header__title{width:100%}@media (min-width:40em){.header__title{width:auto}}.header__title p{color:var(--text-color2);font-size:.875rem;font-weight:700}
 /*# sourceMappingURL=header.css.map */

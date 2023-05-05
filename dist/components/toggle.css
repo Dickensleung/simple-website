@@ -1,0 +1,2 @@
+.toggle{border:none;display:grid;grid-template-columns:1fr 3rem;margin:0}.toggle label{color:var(--toggle);font-size:.875rem;font-weight:700}.toggle label[for=dark]{line-height:1.5rem;margin-right:.8125rem}
+/*# sourceMappingURL=toggle.css.map */

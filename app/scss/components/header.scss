@@ -1,7 +1,24 @@
+@use '../util/' as *;
+
 .header{
-    .header__title{
-        h1{
-            font-size: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: rem(36);
+
+    @include breakpoint(medium) {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title{
+        width: 100%;
+        @include breakpoint(medium) {
+            width: auto;
+        }
+        p{
+            font-size: rem(14);
+            font-weight: 700;
+            color: var(--text-color2);
         }
     }
 }
