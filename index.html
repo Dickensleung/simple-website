@@ -16,8 +16,8 @@
         rel="stylesheet"
       />
   
-      <link rel="stylesheet" href="/dist/style.css"/>
-      <script defer src="/dist/script.js"></script>
+      <link rel="stylesheet" href="/dist/styles/style.css"/>
+      <script defer src="/dist/js/script.js"></script>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -32,24 +32,16 @@
       <p>Total Followers: 23,004</p>
     </div>
     
-    <fieldset aria-label="theme toggle" role="radiogroup">
-      <p>Dark Mode</p>
-      <label for="light">Light</label>
-      <div class="toggle__wrapper">
-        <span class="toggle__wrapper">
-          <input type="radio" name="theme" id="light" checked>
-          <!-- light label ends-->
-          <input type="radio" name="theme" id="system" checked><!-- adjusted according to system preferences-->
-          <input type="radio" name="theme" id="dark">
+    <fieldset class="header__toggle toggle" aria-label="theme toggle"role="radiogroup">
+        <label for="dark">Dark Mode <span class="visually-hidden">On</span></label>
+        <div class="toggle__wrapper">
+          <input type="radio" name="theme" id="dark" />
+          <input type="radio" name="theme" id="light" />
           <span aria-hidden="true" class="toggle__background"></span>
-          <span aria-hidden="true" class="toggle__switcher"></span>
-        </span>
-        <label for="system-pref">System Preference</label>
-        <label for="dark">Dark</label>
-        <!-- dark label ends-->
-      </div>
-      
-    </fieldset>
+          <span aria-hidden="true" class="toggle__button"></span>
+        </div>
+        <label for="light" class="visually-hidden">Dark Mode Off</label>
+      </fieldset>
   </header>
 
   <section class="container cards">
@@ -57,7 +49,7 @@
       <div class="card card--facebook">
         <div class="card__media">
           <!--card top start-->
-          <img class="card__icon src="#" alt="Facebook">
+          <img class="card__icon src='#' alt='Facebook'">
           <div class="card__username">@nathanf</div>
           <!--card middle start-->
           <div class="card__followers">

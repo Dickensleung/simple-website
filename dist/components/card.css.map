@@ -1,1 +1,0 @@
-{"version":3,"sources":["components/card.scss","components/card.css"],"names":[],"mappings":"AAEA,OACI,YCDJ","file":"components/card.css","sourcesContent":["@use '../util' as *;\r\n\r\n.cards{\r\n    display: grid;\r\n}",".cards {\n  display: grid;\n}"]}

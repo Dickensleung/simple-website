@@ -2,4 +2,98 @@
 
 .cards{
     display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(30);
+
+@include breakpoint(medium) {
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(large) {
+    grid-template-columns: repeat(4, 1fr);
+    }
+}
+    
+.card {
+    position: relative;
+    overflow: hidden;
+    background: var(--card-bg);
+    color: var(--dark-text1);
+    padding: rem(25);
+    border-radius: rem(5);
+    text-align: center;
+    transition: background 150ms ease-in-out;
+    cursor: pointer;
+
+
+        &__platform {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: rem(20);
+            margin-top: rem(5);
+            margin-bottom: rem(28);
+        }
+
+        &__subtitle {
+            font-size: rem(14);
+            font-weight: 700;
+            color: var(--text-color2);
+        }
+
+        &__username {
+            font-size: rem(12);
+            font-weight: 700;
+            color: var(--text-color2);
+        }
+        
+        &__followers {
+        margin-bottom: rem(25);
+        }
+    
+        &__count {
+        color: var(--text-color);
+        font-weight: 700;
+        letter-spacing: rem(-2);
+        line-height: 1;
+        margin-bottom: rem(4);
+    
+            &--big {
+                font-size: rem(56);
+                color: var(--dark-text2);
+            }
+        
+            &--small {
+                font-size: rem(32);
+            }
+        }
+    
+        &__label {
+        font-size: rem(12);
+        letter-spacing: rem(5);
+        font-weight: 400;
+        color: var(--text-color2);
+        text-transform: uppercase;
+        }
+    
+        &__change {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: rem(12);
+        font-weight: 700;
+    
+            &--up {
+                color: var(--limegreen);
+            }
+        
+            &--down {
+                color: var(--brightred);
+            }
+        
+            img {
+                margin-right: rem(4);
+            }
+        }
+    
 }

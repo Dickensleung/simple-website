@@ -8,27 +8,22 @@ const babel = require('gulp-babel');
 const terser = require('gulp-terser');
 const browsersync = require('browser-sync').create();
 
-// File paths
-const files = {
-	scssPath: 'app/scss/**/*.scss',
-	jsPath: 'app/js/**/*.js',
-};
-
 
 // Sass Task
 function scssTask() {
   return src('app/scss/**/*.scss', { sourcemaps: true })
     .pipe(sass())
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(dest('dist', { sourcemaps: '.' }))
+    .pipe(dest('dist/styles', { sourcemaps: '.' }))
 }
+
 
 // JavaScript Task
 function jsTask() {
 	return src('app/js/**/*.js', { sourcemaps: true })
 		.pipe(babel({ presets: ['@babel/preset-env'] }))
 		.pipe(terser())
-		.pipe(dest('dist', { sourcemaps: '.' }));
+		.pipe(dest('dist/js', { sourcemaps: '.' }))
 }
 
 
@@ -47,19 +42,22 @@ function browserSyncServe(cb) {
 	});
 	cb();
 }
+
 function browserSyncReload(cb) {
 	browsersync.reload();
 	cb();
 }
 
+
+
 // Watch task: watch SCSS and JS files for changes
 // If any change, run scss and js tasks simultaneously
 function watchTask() {
-	watch('*.html', browserSyncReload);
+	watch('*.html',browserSyncReload);
 	watch(
-		['app/scss/**/*.scss', 'app/js/**/*.js'],
+		['app/scss/**/*.scss', 'app/js/**/*.js'], 
 		series(scssTask, jsTask, browserSyncReload)
-	);
+		)
 }
 
 
@@ -67,3 +65,5 @@ function watchTask() {
 // Runs the scss and js tasks simultaneously
 // then runs cacheBust, then watch task
 exports.default = series(parallel(scssTask, jsTask), browserSyncServe, watchTask);
+// Build Gulp Task
+exports.build = series(scssTask, jsTask);
