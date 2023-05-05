@@ -1,0 +1,2 @@
+html{box-sizing:border-box;font-size:100%}*,:after,:before{box-sizing:inherit}body{background:var(--background);color:var(--text-color);font-family:var(--font-inter);margin:0;padding:0}.visually-hidden{height:1px;left:-10000px;overflow:hidden;position:absolute;top:auto;width:1px}h1{font-size:8em}
+/*# sourceMappingURL=boilerplate.css.map */

@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/header.scss","components/header.css"],"names":[],"mappings":"AAEQ,0BACI,aCDZ","file":"components/header.css","sourcesContent":[".header{\r\n    .header__title{\r\n        h1{\r\n            font-size: 4em;\r\n        }\r\n    }\r\n}\r\n",".header .header__title h1 {\n  font-size: 4em;\n}"]}
